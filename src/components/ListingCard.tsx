@@ -13,6 +13,11 @@ interface ListingCardProps {
     price: number
     categorySlug: string
     images: string[]
+    userId: {
+      _id: string
+      username: string
+    }
+    
   }
 }
 
@@ -34,11 +39,10 @@ export default function ListingCard({ listing }: ListingCardProps) {
               No Image Available
             </div>
           )}
-          {/* Subtle overlay for price on mobile or hover */}
           <div className="absolute bottom-2 left-2">
-             <Badge variant="secondary" className="backdrop-blur-md bg-white/80 dark:bg-black/60">
-                {listing.categorySlug}
-             </Badge>
+            <Badge variant="secondary" className="backdrop-blur-md bg-white/80 dark:bg-black/60">
+              {listing.categorySlug}
+            </Badge>
           </div>
         </div>
       </Link>
@@ -57,11 +61,17 @@ export default function ListingCard({ listing }: ListingCardProps) {
           </p>
         </div>
 
-        {/* ---- ACTION BUTTON ---- */}
-        <div className="pt-2">
-          <Link href={`/listing/${listing._id}`} className="w-full">
+        {/* ---- ACTION BUTTONS ---- */}
+        <div className="pt-2 space-y-2">
+          <Link href={`/listing/${listing._id}`} className="w-full block">
             <Button className="w-full font-medium" variant="default">
               View Details
+            </Button>
+          </Link>
+
+          <Link href={`/u/${listing.userId.username}`} className="w-full block">
+            <Button className="w-full font-medium" variant="secondary">
+              Contact Seller
             </Button>
           </Link>
         </div>

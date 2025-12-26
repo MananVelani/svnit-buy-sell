@@ -23,9 +23,7 @@ export async function GET(request : Request,{ params }: { params: Promise<{ slug
 
         try {
 
-          const listings = await ListingModel.find({
-                categorySlug: slug,
-            }).sort({ createdAt: -1 })
+          const listings = await ListingModel.find({ categorySlug: slug, }).sort({ createdAt: -1 }).populate("userId", "username") .lean();
 
             if (!listings || listings.length === 0) {
     return Response.json(
