@@ -134,7 +134,7 @@ export async function sendVerificationEmail(
       
       <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
       <p style="font-size: 12px; color: #aaa;">
-        © ${new Date().getFullYear()} Your Company Name. All rights reserved.
+        © ${new Date().getFullYear()} Svnit-Buy-Sell. All rights reserved.
       </p>
     </div>
   </div>
