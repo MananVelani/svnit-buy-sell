@@ -38,6 +38,7 @@ const SignIn = () => {
       } else {
         toast.success('Sign in successful');
         router.replace('/dashboard'); 
+        router.refresh();
       }
     } catch (error) {
       toast.error('An error occurred during sign in');
