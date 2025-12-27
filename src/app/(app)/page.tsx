@@ -15,8 +15,9 @@ export default function HomePage() {
           <Link
             key={cat.slug}
             href={`/category/${cat.slug}`}
+            className="h-full"
           >
-            <CategoryCard title={cat.name} icon={cat.icon} />
+            <CategoryCard title={cat.name} icon={cat.icon} classname="h-full" />
           </Link>
         ))}
       </div>
