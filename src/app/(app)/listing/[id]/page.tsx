@@ -17,12 +17,10 @@ interface Props {
 export default function ListingDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
 
-  // 2. Set up state for your data
   const [listing, setListing] = useState<Listing | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
-  // 3. Use useEffect to fetch once
   useEffect(() => {
     const fetchListing = async () => {
       try {
@@ -46,7 +44,24 @@ export default function ListingDetail({ params }: { params: Promise<{ id: string
   }, [id])  
 
 
-  if (loading) return <div className="p-10 text-center">Loading listing...</div>
+  if (loading) return <div className="p-10 text-center">
+    <div className="p-10 flex justify-center gap-6">
+      {[1].map((i) => (
+        <div
+          key={i}
+          className="w-200 h-120 bg-gray-200 rounded-xl animate-pulse flex flex-col"
+        >
+          <div className="h-36 w-full bg-gray-300 rounded-t-xl" />
+
+          <div className="p-4 space-y-3">
+            <div className="h-4 w-3/4 bg-gray-300 rounded"></div>
+            <div className="h-3 w-1/2 bg-gray-300 rounded"></div>
+            <div className="h-3 w-full bg-gray-300 rounded"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
   
   if (error || !listing) {
     return (
@@ -61,7 +76,6 @@ export default function ListingDetail({ params }: { params: Promise<{ id: string
   return (
     <div className="max-w-4xl mx-auto py-10 px-4">
       <Card>
-        {/* ========= HEADER ========== */}
         <CardHeader>
           <CardTitle className="text-3xl font-bold">
             {listing.title}
@@ -77,10 +91,8 @@ export default function ListingDetail({ params }: { params: Promise<{ id: string
           </div>
         </CardHeader>
 
-        {/* ========= CONTENT ========== */}
         <CardContent className="space-y-6">
 
-          {/* Images */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {listing.images.map((url: string, idx: number) => (
               <div key={idx} className="relative w-full h-40 rounded-md overflow-hidden">
@@ -96,7 +108,6 @@ export default function ListingDetail({ params }: { params: Promise<{ id: string
             ))}
           </div>
 
-          {/* Description */}
           <div>
             <h2 className="text-lg font-semibold mb-2">Description</h2>
             <p className="whitespace-pre-wrap leading-relaxed">
