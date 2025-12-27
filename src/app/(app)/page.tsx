@@ -92,7 +92,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold">Anuj Yadav</h3>
             <p className="text-sm text-muted-foreground text-center">
-              Community Founder • SVNIT
+               
             </p>
           </CardHeader>
 
