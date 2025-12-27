@@ -97,7 +97,14 @@ const SignIn = () => {
               Sign up
             </Link>
           </p>
+          <p className='mt-2'>
+            Forgot your password?{' '}
+            <Link href="/loginhelp" className="text-blue-600 hover:text-blue-800">
+              Reset Password
+            </Link>
+            </p>
         </div>
+
       </div>
     </div>
   )
