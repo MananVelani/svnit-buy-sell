@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes"
 import Navbar from "@/components/Navbar"
 import AuthProvider from "@/context/AuthProvider"
 import { Toaster } from "sonner"
+import { FloatingButton } from "@/components/FloatingButton"
 
 export default function RootLayout({
   children,
@@ -22,6 +23,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <Toaster />
+        <FloatingButton />
       </body>
       </AuthProvider>
     </html>
