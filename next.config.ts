@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'raw.githubusercontent.com', // Added for your repository images
+        hostname: 'raw.githubusercontent.com', 
         pathname: '/**',
       },
     ],

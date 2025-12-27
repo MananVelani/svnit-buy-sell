@@ -108,8 +108,17 @@ const handleDeleteListing = async (id: string) => {
 
 
   return (
-    <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-accent rounded-md w-full max-w-6xl">
-      <h1 className="text-4xl font-bold mb-8">User Dashboard</h1>
+    <div className="my-8  mx-4 md:mx-8 lg:mx-auto p-6 bg-accent rounded-md w-full max-w-6xl">
+      
+      <div className='flex flex-row justify-between '>
+              <h1 className="text-4xl font-bold mb-8">User Dashboard</h1>
+
+        <Link href="/">
+                  <Button className="font-semibold bg-chart-1 text-white ">
+                    Home
+                  </Button>
+      </Link>
+      </div>
 
       {/* Unique messaging link */}
       <div className="mb-8 bg-sidebar-ring rounded-md p-2">

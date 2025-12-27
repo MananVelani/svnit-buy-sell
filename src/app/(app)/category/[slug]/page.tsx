@@ -55,7 +55,23 @@ export default function CategoryPage({ params }: Props) {
       </h1>
 
       {loading ? (
-        <p>Loading...</p>
+          <div className="p-10 flex gap-6">
+      {[1, 2, 3].map((i) => (
+        <div
+          key={i}
+          className="w-100 h-110 bg-gray-200 rounded-xl animate-pulse flex flex-col"
+        >
+          <div className="h-36 w-full bg-gray-300 rounded-t-xl" />
+
+          <div className="p-4 space-y-3">
+            <div className="h-4 w-3/4 bg-gray-300 rounded"></div>
+            <div className="h-3 w-1/2 bg-gray-300 rounded"></div>
+            <div className="h-3 w-full bg-gray-300 rounded"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+
       ) : listings.length === 0 ? (
         <p className="text-muted-foreground">No listings yet in this category.</p>
       ) : (

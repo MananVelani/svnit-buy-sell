@@ -48,9 +48,9 @@ export default function Navbar() {
                   </Button>
                 </Link>
                 <Link href="/sign-in">
-                  <button className="w-full bg-chart-4 text-foreground rounded-md md:w-auto font-semibold px-3 py-2">
+                  <Button className="w-full bg-chart-4 text-foreground hover:bg-chart-5 rounded-md md:w-auto font-semibold px-3 py-2">
                     Login
-                  </button>
+                  </Button>
                 </Link>
 
                 <Link href="/sign-up">
