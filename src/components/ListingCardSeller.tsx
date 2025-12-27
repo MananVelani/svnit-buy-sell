@@ -20,29 +20,29 @@ interface ListingCardSellerProps {
 
 export default function ListingCardSeller({ listing, onDelete }: ListingCardSellerProps) {
   return (
-    <Card className="hover:shadow-lg transition rounded-lg overflow-hidden">
-      {/* ---- IMAGE ---- */}
-      <div className="relative w-full h-40 bg-secondary">
+    <Card className="p-0 pb-4 hover:shadow-lg transition rounded-lg overflow-hidden">
+
+      <div className=" relative w-full h-60 bg-secondary">
         {listing.images?.[0] && (
           <Image
             src={listing.images[0]}
             alt={listing.title}
             fill
-            className="object-cover"
+            className="object-fill"
           />
         )}
       </div>
 
-      {/* ---- TITLE ---- */}
-      <CardHeader className="pt-4 pb-2">
+
+      <CardHeader >
         <CardTitle className="text-lg font-semibold truncate capitalize">
           {listing.title}
         </CardTitle>
       </CardHeader>
 
-      {/* ---- DETAILS ---- */}
-      <CardContent className="space-y-3 text-sm">
-        {/* Price */}
+
+      <CardContent className="space-y-2 text-sm ">
+
         <div className="flex flex-row items-center gap-3">
           <span className="text-muted-foreground font-medium w-20">Price:</span>
           <p className="text-primary font-semibold text-lg">
@@ -50,7 +50,7 @@ export default function ListingCardSeller({ listing, onDelete }: ListingCardSell
           </p>
         </div>
 
-        {/* Category */}
+
         <div className="flex flex-row items-center gap-3">
           <span className="text-muted-foreground font-medium w-20">Category:</span>
           <Badge className="bg-primary text-primary-foreground capitalize">
@@ -58,7 +58,7 @@ export default function ListingCardSeller({ listing, onDelete }: ListingCardSell
           </Badge>
         </div>
 
-        {/* ---- ACTIONS ---- */}
+
         <div className="flex items-center gap-2 pt-4">
           <Link href={`/listing/${listing._id}`} className="w-full">
             <Button className="w-full" variant="outline">

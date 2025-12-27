@@ -95,13 +95,13 @@ export default function ListingDetail({ params }: { params: Promise<{ id: string
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {listing.images.map((url: string, idx: number) => (
-              <div key={idx} className="relative w-full h-40 rounded-md overflow-hidden">
+              <div key={idx} className="relative w-full h-60 rounded-md overflow-hidden">
                 <Image
                   src={url}
                   alt={listing.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 500px"
-                  className="object-cover"
+                  className="object-fill"
                 />
 
               </div>

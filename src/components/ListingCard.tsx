@@ -23,16 +23,16 @@ interface ListingCardProps {
 
 export default function ListingCard({ listing }: ListingCardProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden border border-border">
-      {/* ---- IMAGE SECTION ---- */}
+    <Card className="p-0 hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden border border-border">
+
       <Link href={`/listing/${listing._id}`}>
-        <div className="relative w-full h-48 bg-muted overflow-hidden group">
+        <div className=" relative w-full h-60 bg-muted overflow-hidden group">
           {listing.images?.[0] ? (
             <Image
               src={listing.images[0]}
               alt={listing.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-fill transition-transform duration-500 group-hover:scale-105"
             />
           ) : (
             <div className="flex items-center justify-center h-full text-muted-foreground">
@@ -47,21 +47,19 @@ export default function ListingCard({ listing }: ListingCardProps) {
         </div>
       </Link>
 
-      {/* ---- CONTENT SECTION ---- */}
-      <CardHeader className="pt-4 pb-1 px-4">
-        <CardTitle className="text-base font-bold truncate capitalize">
+      <CardHeader className="pt-0 px-4">
+        <CardTitle className="text-lg font-bold truncate capitalize">
           {listing.title}
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="px-4 pb-4 pt-0 space-y-4">
+      <CardContent className="px-4 pb-5 pt-0 space-y-4">
         <div className="flex items-baseline justify-between">
-          <p className="text-xl font-bold text-primary">
-            ₹{listing.price.toLocaleString()}
+          <p className="text-lg font-bold text-primary">
+            Price: ₹{listing.price.toLocaleString()}
           </p>
         </div>
 
-        {/* ---- ACTION BUTTONS ---- */}
         <div className="pt-2 space-y-2">
           <Link href={`/listing/${listing._id}`} className="w-full block">
             <Button className="w-full font-medium" variant="default">

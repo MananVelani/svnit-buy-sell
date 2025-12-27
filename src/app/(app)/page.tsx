@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
 
-      {/* -------- CATEGORIES GRID -------- */}
+
       <div className="grid grid-cols-3 mt-8 gap-4 px-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
         {categories.map((cat) => (
           <Link
@@ -21,23 +21,23 @@ export default function HomePage() {
         ))}
       </div>
 
-      {/* -------- ABOUT US TITLE -------- */}
-      <h2 className="text-2xl font-bold mt-14 mb-6 text-center px-4">
+
+      <h2 className="text-2xl font-bold mt-20 mb-6 text-center px-4">
         About Us
       </h2>
 
-      {/* -------- ABOUT US SECTION -------- */}
+
       <section className="mb-20 px-6 flex justify-center gap-10">
         <Card className="max-w-sm w-full shadow-md rounded-2xl border border-border">
           <CardHeader className="flex flex-col items-center gap-3 pt-6">
-            {/* PROFILE IMAGE */}
+
             <div className="w-28 h-28 relative rounded-full overflow-hidden bg-muted">
               <Image 
                 src="https://raw.githubusercontent.com/MananVelani/personal-purpose/main/profile-photo-website-3.jpg"
                 alt="Manan Velani"
                 width={400} 
                 height={400}
-                priority // This ensures the highest quality load speed
+                priority 
               />
             </div>
             <h3 className="text-xl font-semibold">Manan Velani</h3>
@@ -47,7 +47,7 @@ export default function HomePage() {
           </CardHeader>
 
           <CardContent className="flex justify-center gap-5 pb-6 mt-2">
-            {/* INSTAGRAM */}
+
             <a
               href="https://www.instagram.com/manan_velani/"
               target="_blank"
@@ -57,7 +57,7 @@ export default function HomePage() {
               <FaInstagram size={22} />
             </a>
 
-            {/* LINKEDIN */}
+
             <a
               href="https://www.linkedin.com/in/manan-velani-757bb91b6"
               target="_blank"
@@ -67,7 +67,7 @@ export default function HomePage() {
               <FaLinkedin size={22} />
             </a>
 
-            {/* GITHUB */}
+
             <a
               href="https://github.com/MananVelani"
               target="_blank"
@@ -80,14 +80,14 @@ export default function HomePage() {
         </Card>
         <Card className="max-w-sm w-full shadow-md rounded-2xl border border-border">
           <CardHeader className="flex flex-col items-center gap-3 pt-6">
-            {/* PROFILE IMAGE */}
+
             <div className="w-28 h-28 relative rounded-full overflow-hidden bg-muted">
               <Image 
                 src="https://raw.githubusercontent.com/MananVelani/personal-purpose/main/anuj-yadav-1.jpg"
                 alt="Anuj Yadav"
                 width={400} 
                 height={400}
-                priority // This ensures the highest quality load speed
+                priority 
               />
             </div>
             <h3 className="text-xl font-semibold">Anuj Yadav</h3>
@@ -97,7 +97,7 @@ export default function HomePage() {
           </CardHeader>
 
           <CardContent className="flex justify-center gap-5 pb-6 mt-2">
-            {/* INSTAGRAM */}
+
             <a
               href="https://www.instagram.com/raoanuj__?igsh=czhhMDl4bnRiMDM0"
               target="_blank"
@@ -107,7 +107,7 @@ export default function HomePage() {
               <FaInstagram size={22} />
             </a>
 
-            {/* LINKEDIN */}
+
             <a
               href="https://www.linkedin.com/in/anuj-yadav-2418a5188?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
