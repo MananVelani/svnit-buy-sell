@@ -100,4 +100,4 @@ Distributed under the MIT License.
 
 ---
 
-**Developed with ❤️ for SVNIT by [Manan Velani**](https://www.google.com/search?q=https://github.com/MananVelani)
+Developed with ❤️ for SVNIT by [Manan Velani](https://www.google.com/search?q=https://github.com/MananVelani)
